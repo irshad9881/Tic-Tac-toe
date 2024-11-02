@@ -1,0 +1,98 @@
+/*________Tic-tac-toe_______*/
+.tic-tac-toe {
+    position: relative;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    background-color: var(--clr-primary);
+}
+
+.tic-tac-toe > div {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-background);
+    
+}
+
+.tic-tac-toe__cross, .tic-tac-toe__circle {
+    height: 4rem;
+    width: 4rem;
+}
+
+.tic-tac-toe__cross {
+    stroke: var(--clr-cross);
+}
+
+.tic-tac-toe__circle > * {
+    fill: var(--clr-circle);
+}
+
+/*_______Button______*/
+.button {
+    position: relative;
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+    font-weight: 800;
+    color: var(--clr-background);
+    border: 3px solid var(--clr-primary);
+    background-color: var(--clr-primary);
+    transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: var(--clr-primary);
+    background-color: var(--clr-background);
+}
+
+/*_________slider_______*/
+.slider {
+    width: 100vw;
+    height: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__body {
+    width: max-content;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transition: 0.4s ease;
+}   
+
+.slider__cont {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*______Title_______*/
+.title {
+    font-size: 3rem;
+    position: absolute;
+    top: 3rem;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/*______Winner-line______*/
+.winner-line {
+    height: 0;
+    width: 0.5rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    background-color: var(--clr-primary);
+    border: none;
+    transform-origin: center;
+    border-radius: 5rem;
+}
